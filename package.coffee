@@ -34,13 +34,13 @@
     doc: './doc'
   
   bin:
-    courier: './bin/courier'
+    courier: './bin/courier.coffee'
     
   main: 'courier'
   
   scripts:
     test: 'cake test'
-    postinstall: 'cake init'
+    # postinstall: 'cake init'
     
   dependencies:
     'coffee-script': '>= 0.9.6'
