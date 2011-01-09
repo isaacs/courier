@@ -11,7 +11,7 @@
   licenses: [
     {
       type: 'FEISTY'
-      url: 'http://github.com/feisty/license/LICENSE'
+      url: 'http://github.com/feisty/license/raw/master/LICENSE'
     }
   ]
   
@@ -43,8 +43,8 @@
     # postinstall: 'cake init'
     
   dependencies:
-    'coffee-script': '>= 0.9.6'
+    'coffee-script': '>= 1.0.0'
     
   engines:
-    node: '>=0.2.5 <0.3.0'
+    node: '>= 0.3.4'
 }
