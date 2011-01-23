@@ -1,7 +1,8 @@
-                        _        
-     _______  __ ______(_)__ ____
-    / __/ _ \/ // / __/ / -_) __/
-    \__/\___/\_,_/_/ /_/\__/_/   
+                              _____             
+    ________________  ___________(_)____________
+    _  ___/  __ \  / / /_  ___/_  /_  _ \_  ___/
+    / /__ / /_/ / /_/ /_  /   _  / /  __/  /    
+    \___/ \____/\__,_/ /_/    /_/  \___//_/     
 
 npm packages in CoffeeScript - (package.coffee) -> (package.json)
 
@@ -12,26 +13,11 @@ npm packages in CoffeeScript - (package.coffee) -> (package.json)
     npm install courier
   
 # Usage
-    cd facebook_killer # or your current project with a package.coffee
-    courier
-    
-    # fin. (you can now install/publish your npm package using the generated package.json)
+Using courier couldn't be simpler.
 
-# Contributing
-    cd ~
-    git clone YOUR_FORK
-    
-    # make changes
-    
-    # build    
-    cake build
-    npm install .
-    
-    # test on a project
-    cd MY_PROJECT
-    courier
-    
-    # if it works then commit, push and submit a pull request
+1. Translate your package.json into CoffeeScript and move to package.coffee.
+2. Run `courier` against your project.
 
-# TODO
-  see TODO.md
+You will now see package.json in the root of your project; ready to be installed or linked with `npm`.
+
+Use the `-p` or `--print` flag for noisy output.

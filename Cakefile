@@ -3,4 +3,4 @@ task 'init', 'init', ->
 
 task 'test', 'test', ->
   # TODO
-  console.log 'no tests yet...'
+  throw 'no tests yet...'

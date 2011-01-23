@@ -11,8 +11,6 @@ log = console.log
 CoffeeScript = require 'coffee-script'
 {OptionParser} = require 'coffee-script/optparse'
 
-lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib')
-
 usage = '''
   Usage:
     courier [OPTIONS] [PATH_TO_APP = "."]
@@ -33,12 +31,17 @@ switches = [
 ]
 
 parser = new OptionParser switches, usage
-options = parser.parse process.argv
+options = parser.parse process.argv[2...]
 args = options.arguments
 delete options.arguments
 
-log parser.help() if options.help or process.argv.length is 0
-log VERSION if options.version
+if options.help or process.argv.length is 0
+  log parser.help()
+  process.exit 0
+
+if options.version
+  log VERSION
+  process.exit 0
 
 release = (options) ->
   fs.readFile 'package.coffee', (error, data) ->
@@ -51,7 +54,7 @@ release = (options) ->
     json = matches[1]
 
     fs.writeFile 'package.json', json, ->
-      log json
+      log json if options.print
 
 if args.length <= 0
   args.push '.'
