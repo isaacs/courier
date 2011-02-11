@@ -29,6 +29,6 @@
     'coffee-script': '>= 1.0.0'
   },
   engines: {
-    node: '>= 0.3.6'
+    node: '*'
   }
 }
