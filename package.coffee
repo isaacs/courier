@@ -4,7 +4,7 @@ description: 'npm packages in CoffeeScript - (package.coffee) -> (package.json)'
 
 keywords: ['courier']
 
-version: '0.1.0'
+version: '0.1.1'
 
 author: 'Feisty Studios <courier@feistystudios.com> (http://feistystudios.com/)'
 
@@ -35,3 +35,4 @@ dependencies:
   
 engines:
   node: '*'
+  npm: '>=0.3.0'
