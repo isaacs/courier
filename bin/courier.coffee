@@ -49,10 +49,8 @@ release = (options) ->
     throw error if error
 
     coffee = data.toString()
-    js = CoffeeScript.compile(coffee, bare: true)
-    re = /\(([\s\S]*)\);/m
-    matches = re.exec js
-    json = matches[1]
+    js = CoffeeScript.compile('return '+coffee)
+    json = JSON.stringify eval(js), null, 2
 
     fs.writeFile 'package.json', json, ->
       log json if options.print
