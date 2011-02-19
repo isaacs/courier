@@ -6,10 +6,11 @@ fs            = require 'fs'
 path          = require 'path'
 {spawn, exec} = require 'child_process'
 
+
 log = console.log
 
 CoffeeScript = require 'coffee-script'
-{OptionParser} = require 'coffee-script/optparse'
+{OptionParser} = require 'coffee-script/lib/optparse'
 
 usage = '''
   Usage:
